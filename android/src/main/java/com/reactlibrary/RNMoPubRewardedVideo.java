@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.ReactApplicationContext;
@@ -105,6 +106,12 @@ public class RNMoPubRewardedVideo extends ReactContextBaseJavaModule implements 
                 MoPubRewardedAds.setRewardedAdListener(listener);
             }
         });
+    }
+
+    @ReactMethod
+    public void hasRewardedAdForAdUnit(String unitID, Promise promise) {
+        Boolean hasRewarded = MoPubRewardedAds.hasRewardedAd(unitID);
+        promise.resolve(hasRewarded);
     }
 
     @ReactMethod
