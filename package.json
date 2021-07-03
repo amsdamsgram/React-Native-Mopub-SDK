@@ -1,7 +1,7 @@
 {
   "name": "react-native-mopub-sdk",
   "title": "React Native Mopub Sdk",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "this is mopub react native library",
   "main": "index.js",
   "scripts": {
